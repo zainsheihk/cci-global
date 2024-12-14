@@ -1,11 +1,11 @@
 import Link from "next/link";
 import React from "react";
 
-function MainMenu() {
+function MainMenu({ isInvert }: { isInvert?: boolean }) {
   const navigation = [
     "About Us",
     "industries",
-    "Solution",
+    "solutions",
     "careerBox",
     "call insight",
     "knowledge Base",
@@ -16,7 +16,12 @@ function MainMenu() {
     <nav>
       <ul className="flex gap-7">
         {navigation.map((ele: string, index: number) => (
-          <li key={index} className="text-white capitalize text-[15px]">
+          <li
+            key={index}
+            className={` capitalize text-[15px] ${
+              isInvert ? "text-[var(--secondary-color)]" : "text-white"
+            }`}
+          >
             <Link href={ele}>{ele}</Link>
           </li>
         ))}
