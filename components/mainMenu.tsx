@@ -4,7 +4,7 @@ import React from "react";
 function MainMenu() {
   const navigation = [
     "About Us",
-    "Industries",
+    "industries",
     "Solution",
     "careerBox",
     "call insight",
@@ -17,7 +17,7 @@ function MainMenu() {
       <ul className="flex gap-7">
         {navigation.map((ele: string, index: number) => (
           <li key={index} className="text-white capitalize text-[15px]">
-            <Link href="">{ele}</Link>
+            <Link href={ele}>{ele}</Link>
           </li>
         ))}
       </ul>

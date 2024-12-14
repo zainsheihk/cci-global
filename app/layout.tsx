@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
-import { Montserrat} from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -9,7 +11,8 @@ const montserrat = Montserrat({
 });
 export const metadata: Metadata = {
   title: "Home - CCI Global - Africa's BPO",
-  description: "CCI Global is the Top Tier BPO provider in Africa, servicing the USA, UK, Australia, Canada and New Zealand from across the continent.",
+  description:
+    "CCI Global is the Top Tier BPO provider in Africa, servicing the USA, UK, Australia, Canada and New Zealand from across the continent.",
 };
 
 export default function RootLayout({
@@ -19,10 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${montserrat.variable} antialiased`}
-      >
+      <body className={`${montserrat.variable} antialiased`}>
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
