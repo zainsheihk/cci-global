@@ -8,7 +8,7 @@ function Header() {
   const isInvert = true;
   return (
     <header className="container absolute top-0 left-[50%] translate-x-[-50%] py-7 flex justify-between items-center">
-      <Link href="">
+      <Link href="/">
         <Image
           src={logo}
           alt="Logo"
