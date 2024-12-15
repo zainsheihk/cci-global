@@ -6,15 +6,43 @@ import { FaLinkedinIn } from "react-icons/fa6";
 
 function Footer() {
   const navigation = [
-    "About Us",
-    "Industries",
-    "Solution",
-    "careerBox",
-    "call insight",
-    "knowledge Base",
-    "diversity",
-    "connect",
-    "privacy policy",
+    {
+      label: "About Us",
+      url: "",
+    },
+    {
+      label: "industries",
+      url: "/industries",
+    },
+
+    {
+      label: "solutions",
+      url: "/solutions",
+    },
+    {
+      label: "careerBox",
+      url: "/careerbox",
+    },
+    {
+      label: "call insight",
+      url: "/call-insight",
+    },
+    {
+      label: "knowledge Base",
+      url: "/cciknowledgebase",
+    },
+    {
+      label: "diversity",
+      url: "/diversityatcci",
+    },
+    {
+      label: "connect",
+      url: "/connectwithcci",
+    },
+    {
+      label: "privacy policy",
+      url: "/privacy-policy",
+    },
   ];
   return (
     <footer className=" bg-[#e7e9ed]">
@@ -41,14 +69,16 @@ function Footer() {
           </div>
         </div>
         <ul className="flex justify-between">
-          {navigation.map((ele: string, index: number) => (
-            <li
-              key={index}
-              className="text-[var(--secondary-color)] capitalize text-[14px] font-medium"
-            >
-              <Link href="">{ele}</Link>
-            </li>
-          ))}
+          {navigation.map(
+            (ele: { label: string; url: string }, index: number) => (
+              <li
+                key={index}
+                className="text-[var(--secondary-color)] capitalize text-[14px] font-medium"
+              >
+                <Link href={ele.url}>{ele.label}</Link>
+              </li>
+            )
+          )}
         </ul>
       </div>
     </footer>
