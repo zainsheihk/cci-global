@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import MainMenu from "./mainMenu";
 import Link from "next/link";
 import logo from "../public/images/cci-logo.png";
@@ -15,17 +15,40 @@ function Header() {
     "/cciknowledgebase",
     "/diversityatcci",
   ];
-  const isInvert = invertMenu.includes(pathName);
+  const [isSticky, setIsSticky] = useState(false);
+  const isInvert = invertMenu.includes(pathName) || isSticky;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 1000) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="container absolute top-0 left-[50%] translate-x-[-50%] py-7 flex justify-between items-center">
-      <Link href="/">
-        <Image
-          src={logo}
-          alt="Logo"
-          className={`max-w-[100px] ${isInvert ? "invert" : ""}`}
-        ></Image>
-      </Link>
-      <MainMenu isInvert={isInvert} />
+    <header
+      className={`${
+        isSticky
+          ? "fixed  py-5 bg-white animate-[header-animate_500ms_ease-in-out] shadow-md"
+          : "absolute py-7 "
+      }  top-0 z-50 left-[0%] w-full`}
+    >
+      <div className="container flex justify-between items-center">
+        <Link href="/">
+          <Image
+            src={logo}
+            alt="Logo"
+            className={`max-w-[100px] ${isInvert ? "invert" : ""}`}
+          ></Image>
+        </Link>
+        <MainMenu isInvert={isInvert} />
+      </div>
     </header>
   );
 }

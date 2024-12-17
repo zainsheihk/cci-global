@@ -15,7 +15,7 @@ function Button({
   return (
     <Link
       className={cn(
-        "bg-[var(--primary-color)] text-white py-2 px-6 text-[14px] font-semibold rounded-md " +
+        "bg-[var(--primary-color)] text-white py-2 px-6 text-[14px] font-semibold rounded-md hover:bg-[var(--secondary-color)] transition-all duration-500 " +
           className
       )}
       href={href}

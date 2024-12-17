@@ -9,41 +9,75 @@
   --secondary-color: #0f204b;
 }
 
-
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: "Montserrat", sans-serif;
 }
 
+header {
+  transition: top 0.5s ease-in-out;
+}
+.location-card::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: var(--primary-color);
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 1s;
+}
+.location-card:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
 .purple-gradient {
-  background-image: linear-gradient(180deg, #380f4b 35%, #0f204b)
+  background-image: linear-gradient(180deg, #380f4b 35%, #0f204b);
 }
 
 .industries-gradient {
   background-image: linear-gradient(180deg, #042987, #049f9f);
-
 }
 
 .card-shadow {
-  box-shadow: 0 0 3.15px 0 rgba(0, 0, 0, 0.01), 0 0 6.52px 0 rgba(0, 0, 0, 0.02), 0 0 13px 0 rgba(0, 0, 0, 0.03), 0 0 25.48px 0 rgba(0, 0, 0, 0.04), 0 1px 46.85px 0 rgba(0, 0, 0, 0.05), 0 0 80px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 3.15px 0 rgba(0, 0, 0, 0.01), 0 0 6.52px 0 rgba(0, 0, 0, 0.02),
+    0 0 13px 0 rgba(0, 0, 0, 0.03), 0 0 25.48px 0 rgba(0, 0, 0, 0.04),
+    0 1px 46.85px 0 rgba(0, 0, 0, 0.05), 0 0 80px 0 rgba(0, 0, 0, 0.06);
+}
+.card-shadow:hover {
+  box-shadow: 0 0 3.15px 0 rgba(0, 0, 0, 0.05), 0 0 6.52px 0 rgba(0, 0, 0, 0.08),
+    0 0 13px 0 rgba(0, 0, 0, 0.1), 0 0 25.48px 0 rgba(0, 0, 0, 0.13),
+    0 0 46.85px 0 rgba(0, 0, 0, 0.16), 0 0 80px 0 rgba(0, 0, 0, 0.21),
+    0 0 3.15px 0 rgba(0, 0, 0, 0.01), 0 0 6.52px 0 rgba(0, 0, 0, 0.02),
+    0 0 13px 0 rgba(0, 0, 0, 0.03), 0 0 25.48px 0 rgba(0, 0, 0, 0.04),
+    0 1px 46.85px 0 rgba(0, 0, 0, 0.05), 0 0 80px 0 rgba(0, 0, 0, 0.06);
 }
 
 .section-overlay:after {
   background-color: rgba(15, 32, 75, 0.6);
-  background-image: linear-gradient(180deg, rgba(2, 10, 32, 0.78), hsla(0, 0%, 100%, 0))
+  background-image: linear-gradient(
+    180deg,
+    rgba(2, 10, 32, 0.78),
+    hsla(0, 0%, 100%, 0)
+  );
 }
 
 .gallery-overlay {
-  background-image: linear-gradient(180deg, transparent, #111624)
+  background-image: linear-gradient(180deg, transparent, #111624);
 }
 
+.card-overlay:after {
+  background-image: linear-gradient(180deg, transparent, rgba(2, 10, 32, 0.75));
+}
 .agent-gradient {
-  background-image: linear-gradient(180deg, #ffa75f, #ff7527)
+  background-image: linear-gradient(180deg, #ffa75f, #ff7527);
 }
 
 .gallery-overlay-hover {
-  background-image: linear-gradient(180deg, #042987, #049f9f)
+  background-image: linear-gradient(180deg, #042987, #049f9f);
 }
 
 .splide__arrow--prev {
@@ -55,13 +89,18 @@ body {
 }
 
 .agent-image-box {
-  box-shadow: 0 0 3.15px 0 rgba(0, 0, 0, 0.07), 0 0 6.52px 0 rgba(0, 0, 0, 0.11), 0 0 13px 0 rgba(0, 0, 0, 0.14), 0 0 25.48px 0 rgba(0, 0, 0, 0.16), 0 0 46.85px 0 rgba(0, 0, 0, 0.21), 0 0 80px 0 rgba(0, 0, 0, 0.27);
+  box-shadow: 0 0 3.15px 0 rgba(0, 0, 0, 0.07), 0 0 6.52px 0 rgba(0, 0, 0, 0.11),
+    0 0 13px 0 rgba(0, 0, 0, 0.14), 0 0 25.48px 0 rgba(0, 0, 0, 0.16),
+    0 0 46.85px 0 rgba(0, 0, 0, 0.21), 0 0 80px 0 rgba(0, 0, 0, 0.27);
 }
 
 .call-insight-gradient:after {
-  background-image: linear-gradient(180deg, rgba(15, 32, 75, 0.6), rgba(2, 10, 32, 0.78));
+  background-image: linear-gradient(
+    180deg,
+    rgba(15, 32, 75, 0.6),
+    rgba(2, 10, 32, 0.78)
+  );
 }
-
 
 .circles {
   position: absolute;
@@ -175,7 +214,52 @@ body {
 @keyframes WordsSpin {
   to {
     transform: translateX(-50%) translateY(-50%) rotate(180deg);
+  }
+}
+@keyframes header-animate {
+  from {
+    transform: translateY(-30px);
+    opacity: 0.2;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 
+@keyframes width {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes scaleUp {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+@keyframes slideUp {
+  from {
+    opacity: 0.2;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

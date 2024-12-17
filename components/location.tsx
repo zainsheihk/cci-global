@@ -6,12 +6,10 @@ function Location() {
   return (
     <section className="container py-[80px]">
       <Heading text="Locations" className="!text-[var(--secondary-color)]" />
-      <div className="flex gap-5">
+      <div className="flex flex-wrap justify-between gap-y-10">
         <Card />
         <Card />
         <Card />
-      </div>
-      <div className="flex gap-5">
         <Card />
         <Card />
         <Card />
