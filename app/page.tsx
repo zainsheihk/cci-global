@@ -1,5 +1,4 @@
 import About from "@/components/about";
-import Banner from "@/components/banner";
 import ParticleCanvas from "@/components/banner-2";
 import GloballyCapable from "@/components/globallyCapable";
 import Location from "@/components/location";
