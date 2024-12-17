@@ -1,5 +1,6 @@
 import About from "@/components/about";
 import Banner from "@/components/banner";
+import ParticleCanvas from "@/components/banner-2";
 import GloballyCapable from "@/components/globallyCapable";
 import Location from "@/components/location";
 import News from "@/components/news";
@@ -10,7 +11,8 @@ import Why from "@/components/why";
 export default function Home() {
   return (
     <>
-      <Banner />
+      {/* <Banner /> */}
+      <ParticleCanvas />
       <About />
       <Location />
       <Why />
