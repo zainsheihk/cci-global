@@ -1,5 +1,4 @@
 "use client";
-
 import About from "@/components/about";
 import ParticleCanvas from "@/components/banner-2";
 import GloballyCapable from "@/components/globallyCapable";

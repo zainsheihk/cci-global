@@ -1,7 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import React from "react";
-import AnimatedNumbers from "react-animated-numbers";
+import dynamic from "next/dynamic";
+const AnimatedNumbers = dynamic(() => import("react-animated-numbers"), {
+  ssr: false,
+});
 import Card from "./card-new";
 
 function About({ scrollYProgress }: { scrollYProgress: any }) {
