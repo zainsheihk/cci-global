@@ -5,16 +5,29 @@ import { FaLinkedin } from "react-icons/fa";
 
 export default function TeamCard() {
   return (
-    <div className="w-1/2 relative group">
-      <Image src={team} alt="Team" className="w-full" />
-      <div className=" absolute left-0 bottom-0 w-[40%] bg-[var(--secondary-color)] p-5">
-        <h6 className="text-white font-medium capitalize text-[20px]">
-          martin Roe
-        </h6>
-        <p className="text-[var(--primary-color)]">Chief Executive Officer</p>
+    <div className="w-[32%] relative group rounded-2xl  overflow-hidden">
+      <div className="overflow-hidden rounded-2xl bg-[#18182c]  flex justify-center items-center py-10">
+        <div className="w-[120px] h-[120px] rounded-full overflow-hidden border-[3px] border-[2px_solid_#ccc]">
+          <Image
+            src={team}
+            alt="Team"
+            className="w-full h-full  object-cover "
+          />
+        </div>
       </div>
-      <div className="bg-[var(--secondary-color)] opacity-0 group-hover:opacity-100 transition-opacity justify-between items-end p-5 absolute top-0 left-0 h-full flex flex-col">
-        <p className="text-white leading-[1.4] text-[14px]">
+      <div className="p-5 pt-5  rounded-2xl relative -top-3 z-20 card-bg card-mask">
+        <div className="flex justify-between items-center">
+          <div>
+            <h6 className=" font-semibold text-[var(--secondary-color)] capitalize text-[20px] leading-6">
+              martin Roe
+            </h6>
+            <p className="text-[var(--primary-color)] text-[14px]">
+              Chief Executive Officer
+            </p>
+          </div>
+          <FaLinkedin className="text-[var(--primary-color)] text-[36px]" />
+        </div>
+        <p className="leading-[1.4] text-[13px]   mt-2 ">
           With extensive experience in the BPO sector in both the client and
           vendor side of operations, Martin has overseen CCI’s strategy
           development to become Africa’s largest outsourcing provider, steering
@@ -22,7 +35,6 @@ export default function TeamCard() {
           passion for Impact Sourcing, incorporating it as one of CCI’s core
           values.
         </p>
-        <FaLinkedin className="text-white text-[36px]" />
       </div>
     </div>
   );

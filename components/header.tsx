@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import React, { useEffect, useState } from "react";
 import MainMenu from "./mainMenu";
@@ -21,9 +22,9 @@ function Header() {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 1000) {
-        setIsSticky(true);
+        // setIsSticky(true);
       } else {
-        setIsSticky(false);
+        // setIsSticky(false);
       }
     };
 

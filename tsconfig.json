@@ -25,6 +25,7 @@
   "include": [
     "next-env.d.ts",
     "react-splide.d.ts",
+    "dotlottieplayer.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"

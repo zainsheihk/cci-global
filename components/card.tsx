@@ -6,11 +6,11 @@ import { FaLinkedinIn } from "react-icons/fa";
 function Card() {
   return (
     <div
-      className="card-shadow group  transition-all duration-1000 w-[32%] overflow-hidden relative 
-   "
+      className="card-shadow group  transition-all duration-1000 w-[32%] overflow-hidden relative p-3 border border-[#49484845] rounded-2xl
+   bg-[#18182c]"
     >
-      <div className="after:absolute after:top-0 after:left-0 card-overlay after:w-full after:h-full relative">
-        <div className="overflow-hidden">
+      <div className="after:absolute after:top-0 after:left-0 card-overlay after:w-full after:h-full relative after:rounded-2xl">
+        <div className="overflow-hidden rounded-2xl">
           <Image
             src={card}
             alt="card"
@@ -25,7 +25,7 @@ function Card() {
         </div>
       </div>
       <div>
-        <p className="text-[12px] p-4 pb-10  leading-[1.6]">
+        <p className="text-[14px] text-white p-4 pb-10  leading-[1.6] opacity-80">
           One of our fastest growing markets and at the spearhead of our
           continuous evolution strategy. CCI are aligned to the Kenya Vision
           2030 that aims to transform Kenya into a rapidly industrializing,

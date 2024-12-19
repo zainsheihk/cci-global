@@ -44,7 +44,7 @@ function MainMenu({ isInvert }: { isInvert?: boolean }) {
           (ele: { label: string; url: string }, index: number) => (
             <li
               key={index}
-              className={` capitalize text-[15px]  relative hover:after:w-[100%] after:w-[0] after:transition-all after:duration-500 duration-300 after:h-[1px] after:bg-[var(--primary-color)] after:block after:z-20 after:absolute after:bottom-[-2px] after:left-[50%] after:translate-x-[-50%]  hover:text-[var(--primary-color)] ${
+              className={` capitalize text-[15px]  relative after:transition-all after:duration-500 duration-300 hover:text-[var(--primary-color)] ${
                 isInvert ? "text-[var(--secondary-color)]" : "text-white"
               }`}
             >
