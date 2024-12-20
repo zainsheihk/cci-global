@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import Image from "next/image";
 import React, { useRef } from "react";
-import solutionImage from "../public/images/Business-Growth.jpg";
+
 import Button from "./button";
 import { useTransform, motion, useScroll, MotionValue } from "framer-motion";
 import Heading from "./heading";
@@ -12,7 +12,9 @@ function SolutionCard({
   progress,
   range,
   targetScale,
+  image,
 }: {
+  image: any;
   i: number;
   title: string;
   description: string;
@@ -86,12 +88,15 @@ function SolutionCard({
 
         <div className={"flex justify-between h-full"}>
           <div className={" w-[50%] flex flex-col justify-between"}>
-            <Heading text={title} className="text-[50px] text-white" />
+            <Heading
+              text={title}
+              className="text-[44px] text-white leading-[1.1]"
+            />
             <div>
               <p className="text-white opacity-80 mb-10w">{description}</p>
               <Button
                 href={""}
-                label="Explore More"
+                label="More on our expertise"
                 className="w-fit mt-5 inline-block"
               />
             </div>
@@ -104,7 +109,7 @@ function SolutionCard({
               className={"w-full h-full"}
               style={{ scale: imageScale }}
             >
-              <Image fill src={solutionImage} alt="image" />
+              <Image fill src={image} alt="image" />
             </motion.div>
           </div>
         </div>

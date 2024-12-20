@@ -1,9 +1,23 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import Image from "next/image";
 import React from "react";
 import map from "../public/images/list.svg";
 
 function News() {
+  const news = [
+    {
+      title:
+        "CCI Kenya Celebrates Annual Fun In the Park Day With Over 10,000 People",
+    },
+    {
+      title:
+        "Construction Commences On Our New 4000 Seat Service Center in Tatu City",
+    },
+    {
+      title: "Excellence in Customer Service Awards ’23 Winner",
+    },
+  ];
   return (
     // <section className="container flex  items-center justify-between py-[80px]">
     //   <div className="w-[20%]">
@@ -47,51 +61,25 @@ function News() {
           </h2>
         </div>
         <div className="w-[60%] ">
-          <div className="  bg-white rounded-3xl card-bg card-mask overflow-hidden py-[30px] px-[50px] mb-3 ">
-            <p className="text-[var(--primary-color)] font-medium pb-2 text-[20px]">
-              06/01/2024
-            </p>
-            <h3 className="text-[var(--secondary-color)] text-[21px] font-semibold">
-              CCI Kenya Celebrates Annual Fun In the Park Day With Over 10,000
-              People
-            </h3>
+          {news.map((item: any, index: number) => (
+            <div
+              key={index}
+              className="  bg-white rounded-3xl card-bg card-mask overflow-hidden py-[30px] px-[50px] mb-3 "
+            >
+              <p className="text-[var(--primary-color)] font-medium pb-2 text-[20px]">
+                06/01/2024
+              </p>
+              <h3 className="text-[var(--secondary-color)] text-[21px] font-semibold">
+                {item.title}
+              </h3>
 
-            {/* <p className="text-gray-700">
-              In 2022, CCI Kenya hosted our annual event for family, friends &
-              co-workers to celebrate our achievements and our amazing employees
-              with live performances and from major African artists{" "}
-            </p> */}
-          </div>
-          <div className="  bg-white rounded-3xl card-bg card-mask overflow-hidden py-[30px] px-[50px] mb-3 ">
-            <p className="text-[var(--primary-color)] font-medium pb-2 text-[20px]">
-              06/01/2024
-            </p>
-            <h3 className="text-[var(--secondary-color)] text-[21px] font-semibold">
-              CCI Kenya Celebrates Annual Fun In the Park Day With Over 10,000
-              People
-            </h3>
-
-            {/* <p className="text-gray-700">
-              In 2022, CCI Kenya hosted our annual event for family, friends &
-              co-workers to celebrate our achievements and our amazing employees
-              with live performances and from major African artists{" "}
-            </p> */}
-          </div>
-          <div className="  bg-white rounded-3xl card-bg card-mask overflow-hidden py-[30px] px-[50px] mb-3 ">
-            <p className="text-[var(--primary-color)] font-medium pb-2 text-[20px]">
-              06/01/2024
-            </p>
-            <h3 className="text-[var(--secondary-color)] text-[21px] font-semibold">
-              CCI Kenya Celebrates Annual Fun In the Park Day With Over 10,000
-              People
-            </h3>
-
-            {/* <p className="text-gray-700">
-              In 2022, CCI Kenya hosted our annual event for family, friends &
-              co-workers to celebrate our achievements and our amazing employees
-              with live performances and from major African artists{" "}
-            </p> */}
-          </div>
+              {/* <p className="text-gray-700">
+                In 2022, CCI Kenya hosted our annual event for family, friends &
+                co-workers to celebrate our achievements and our amazing employees
+                with live performances and from major African artists{" "}
+              </p> */}
+            </div>
+          ))}
         </div>
       </div>
     </section>
