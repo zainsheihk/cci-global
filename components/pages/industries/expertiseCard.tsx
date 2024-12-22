@@ -1,24 +1,23 @@
+import Image from "next/image";
 import React from "react";
-
-export default function ExpertiseCard() {
+import card from "@/public/images/driving-companywide-efficiencies-with-ai.webp";
+export default function ExpertiseCard({
+  title,
+  description,
+}: {
+  title: string;
+  description: string;
+}) {
   return (
-    <div className="flex gap-10">
-      <div className="relative after:w-[1px] after:absolute after:h-full after:bg-black after:top-0 after:right-[-20px]">
-        <p className="text-[var(--primary-color)] text-[40px] font-semibold leading-none">
-          1
-        </p>
+    <div className=" rounded-3xl overflow-hidden shadow-2xl w-[32%]">
+      <div className="max-h-[250px] overflow-hidden">
+        <Image src={card} alt="" className="w-full h-full object-cover" />
       </div>
-      <div>
-        <h6 className="font-semibold mb-3 text-[20px]">
-          Optimizing Your Business
+      <div className="py-5 px-8 pb-8 ">
+        <h6 className="font-semibold mb-1 text-[22px] text-[var(--secondary-color)]">
+          {title}
         </h6>
-        <p className="text-[15px] leading-8">
-          CCI works with clients to develop a collaborative partnership that not
-          only brings efficiencies to your support functions but also provides a
-          roadmap for continuous development and process enhancement. We work
-          with our clients to be part of the process and bring added value to
-          their network.
-        </p>
+        <p className="text-[14px] leading-6">{description}</p>
       </div>
     </div>
   );

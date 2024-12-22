@@ -1,23 +1,23 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
 import SolutionCard from "./solutionCard";
 
-export default function TabContent() {
+export default function TabContent({
+  description,
+  solutions,
+}: {
+  description: any;
+  solutions: any;
+}) {
   return (
     <div className="mt-20">
       <p className="text-[var(--secondary-color)] text-[15px] leading-7">
-        CCI assist clients in growing their business by applying a customer
-        focused approach to engagement. With a focus on the human experience, we
-        create the interactions that directly impact how your customers feel and
-        perceive your brand. CCI’s first language communication skills,
-        empathetic interactions and informed agents directly impact your bottom
-        line and create new revenue opportunities across your products and
-        services.
+        {description}
       </p>
-      <div className="mt-20 flex flex-wrap  justify-between gap-y-6 ">
-        <SolutionCard />
-        <SolutionCard />
-        <SolutionCard />
-        <SolutionCard />
+      <div className="mt-20 flex flex-wrap gap-6 ">
+        {solutions.map((ele: any, index: number) => (
+          <SolutionCard {...ele} key={index} />
+        ))}
       </div>
     </div>
   );

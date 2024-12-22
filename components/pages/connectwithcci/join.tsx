@@ -2,7 +2,8 @@ import Image from "next/image";
 import React from "react";
 import pattern from "@/public/images/6318668f5d7a13f2e29e4821_Frame 146-p-1600.png";
 import agent from "@/public/images/jump.png";
-import joinus from "@/public/images/Join-Us-1024x133-1.png";
+import joinus from "@/public/images/Join-Us-1024x133-1-removebg-preview.png";
+import Link from "next/link";
 export default function JoinUs() {
   return (
     <section className="py-[80px] purple-gradient relative">
@@ -17,11 +18,7 @@ export default function JoinUs() {
         </div>
         <div className="w-[45%]">
           <div className="">
-            <Image
-              src={joinus}
-              alt=""
-              className="agent-image-box max-w-[300px] mb-8"
-            />
+            <Image src={joinus} alt="" className=" max-w-[300px] mb-8" />
             <p className="text-white font-medium text-[16px]">
               Do you have a proven track record of delivery? Are you the very
               best at what you do? If you’re looking for an environment that
@@ -31,7 +28,11 @@ export default function JoinUs() {
             </p>
 
             <p className="text-white font-medium text-[16px] mt-5">
-              Send your CV to Careers@cci.com
+              Send your CV to{" "}
+              <Link href={""} className="underline">
+                {" "}
+                Careers@cci.com
+              </Link>
             </p>
           </div>
         </div>

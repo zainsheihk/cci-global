@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import ReactAOS from "@/libraries/aos";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -22,7 +23,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${montserrat.variable} antialiased`}>
+      <body className={`${montserrat.variable} antialiased overflow-x-hidden`}>
+        <ReactAOS />
         <Header />
         {children}
         <Footer />
