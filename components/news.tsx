@@ -7,6 +7,7 @@ import "@splidejs/react-splide/css";
 import "@splidejs/react-splide/css/core";
 
 function News() {
+  //
   const news = [
     {
       title: "CCI Kenya is now the Largest BPO Operator in Kenya",
