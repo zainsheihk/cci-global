@@ -98,72 +98,104 @@ export default function Page() {
       <section>
         <div className="bg-[#f2f2f2] flex justify-between py-[80px]">
           <div className="container">
-            <div>
-              <p className="text-[var(--secondary-color)] leading-6 mb-5">
-                DISCLOSURE OF YOUR INFORMATION <br />
-                We may share your information with selected third parties
-                including business partners, suppliers, customers, end customers
-                and other sub-contractors for the performance of any contract we
-                enter into with them or you. We may share your personal
-                information with any member of our group including our holding
-                and subsidiary companies. We may also disclose your personal
-                information to third parties in the event that we sell or buy
-                any business or assets, in which case we may disclose your
-                personal data to the prospective seller or buyer of such
-                business or assets, or if our group companies or substantially
-                all of their assets are acquired by a third party, in which case
-                personal data will be one of the transferred assets. We may also
-                share your personal data where we are under a duty to disclose
-                or share your personal data in order to comply with any legal
-                obligation, or in order to enforce or comply with the terms and
-                conditions of agreements which we have entered into; or to
-                protect the rights, property, or safety of CCI South Africa, our
-                customers, end customers or others. This may include exchanging
-                information with other companies and organisations for the
-                purposes of fraud protection and credit risk reduction.
-              </p>
-              <p className="text-[var(--secondary-color)] leading-6 mb-5">
-                WHERE WE STORE YOUR PERSONAL DATA The data that we collect from
-                you may be transferred to, and stored at, a destination outside
-                South Africa. It may also be processed outside South Africa by
-                our customers and end customers including in Australia, New
-                Zealand, UK and the USA. You agree to this transfer, storing or
-                processing. We will take all steps reasonably necessary to
-                ensure that your data is treated securely and in accordance with
-                this privacy policy, and in situations where we are acting as a
-                subcontractor by processing your data on a customer’s or end
-                customer’s behalf, in accordance with their requirements.
-              </p>
-              <p className="text-[var(--secondary-color)] leading-6 mb-5">
-                YOUR RIGHTS
-                <br />
-                You have the right to ask us not to process your personal data
-                for marketing purposes.
-                <br />
-                You have the right to ask us to update, correct or delete your
-                personal information.
-                <br />
-                You have the right to request us to confirm if we hold personal
-                information about you.
-              </p>
-              <p className="text-[var(--secondary-color)] leading-6 mb-5">
-                INFORMATION SECURITY
-                <br />
-                We continuously establish and maintain appropriate, reasonable
-                technical and organizational measures by taking appropriate,
-                reasonable technical and organizational measures to safeguard
-                and prevent information under our care from loss of, damage to
-                or unauthorized access, processing, and destruction of personal
-                information.
-              </p>
-              <p className="text-[var(--secondary-color)] leading-6 mb-5">
-                CHANGES TO OUR PRIVACY POLICY
-                <br />
-                Any changes we may make to our Privacy Policy in the future will
-                be posted on our website. Please check back frequently to see
-                any updates or changes to our privacy policy.
-              </p>
-            </div>
+            <p>USES MADE OF THE INFORMATION</p>
+            <p>We use information held about you in the following ways:</p>
+            <ul>
+              <li>
+                to carry out our obligations arising from any contracts entered
+                into between you and an end customer or our customers and to
+                provide you with the information, products and services that you
+                request from them;
+              </li>
+              <li>
+                to provide you with information about other goods and services
+                they may offer or which they feel may interest you;
+              </li>
+              <li>
+                to provide your details to our customers and any end customers
+                for whom we are providing subcontracted services;
+              </li>
+              <li>
+                to provide you, or permit our customers or end customers or
+                selected third parties to provide you with information about
+                goods or services we or they feel may be of interest to you.
+              </li>
+            </ul>
+            <p>&nbsp;</p>
+            <p>DISCLOSURE OF YOUR INFORMATION</p>
+            <p>
+              We may share your information with selected third parties
+              including business partners, suppliers, customers, end customers
+              and other sub-contractors for the performance of any contract we
+              enter into with them or you.
+            </p>
+            <p>
+              We may share your personal information with any member of our
+              group including our holding and subsidiary companies.
+            </p>
+            <p>
+              We may also disclose your personal information to third parties in
+              the event that we sell or buy any business or assets, in which
+              case we may disclose your personal data to the prospective seller
+              or buyer of such business or assets, or if our group companies or
+              substantially all of their assets are acquired by a third party,
+              in which case personal data will be one of the transferred assets.
+            </p>
+            <p>
+              We may also share your personal data where we are under a duty to
+              disclose or share your personal data in order to comply with any
+              legal obligation, or in order to enforce or comply with the terms
+              and conditions of agreements which we have entered into; or to
+              protect the rights, property, or safety of CCI South Africa, our
+              customers, end customers or others. This may include exchanging
+              information with other companies and organisations for the
+              purposes of fraud protection and credit risk reduction.
+            </p>
+            <p>&nbsp;</p>
+            <p>WHERE WE STORE YOUR PERSONAL DATA</p>
+            <p>
+              The data that we collect from you may be transferred to, and
+              stored at, a destination outside South Africa. It may also be
+              processed outside South Africa by our customers and end customers
+              including in Australia, New Zealand, UK and the USA. You agree to
+              this transfer, storing or processing. We will take all steps
+              reasonably necessary to ensure that your data is treated securely
+              and in accordance with this privacy policy, and in situations
+              where we are acting as a subcontractor by processing your data on
+              a customer’s or end customer’s behalf, in accordance with their
+              requirements.
+            </p>
+            <p>&nbsp;</p>
+            <p>YOUR RIGHTS</p>
+            <p>
+              You have the right to ask us not to process your personal data for
+              marketing purposes.
+            </p>
+            <p>
+              You have the right to ask us to update, correct or delete your
+              personal information.
+            </p>
+            <p>
+              You have the right to request us to confirm if we hold personal
+              information about you.
+            </p>
+            <p>&nbsp;</p>
+            <p>INFORMATION SECURITY</p>
+            <p>
+              We continuously establish and maintain appropriate, reasonable
+              technical and organizational measures by taking appropriate,
+              reasonable technical and organizational measures to safeguard and
+              prevent information under our care from loss of, damage to or
+              unauthorized access, processing, and destruction of personal
+              information.
+            </p>
+            <p>&nbsp;</p>
+            <p>CHANGES TO OUR PRIVACY POLICY</p>
+            <p>
+              Any changes we may make to our Privacy Policy in the future will
+              be posted on our website. Please check back frequently to see any
+              updates or changes to our privacy policy.
+            </p>
           </div>
         </div>
       </section>
@@ -188,13 +220,13 @@ export default function Page() {
               To download Our PAIA Manual <Link href={""}> --Click Here</Link>
             </p>
             <p className="text-white font-semibold ">
-              To download Our PAIA Manual <Link href={""}> --Click Here</Link>
+              To download Our PAIA Form 1 <Link href={""}> --Click Here</Link>
             </p>
             <p className="text-white font-semibold ">
-              To download Our PAIA Manual <Link href={""}> --Click Here</Link>
+              To download Our PAIA Form 2 <Link href={""}> --Click Here</Link>
             </p>
             <p className="text-white font-semibold ">
-              To download Our PAIA Manual <Link href={""}> --Click Here</Link>
+              To download Our PAIA Form 3 <Link href={""}> --Click Here</Link>
             </p>
           </div>
         </div>

@@ -1,7 +1,5 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
-
 import { FaLinkedinIn } from "react-icons/fa";
 
 function Card({
@@ -9,9 +7,9 @@ function Card({
   description,
   image,
 }: {
-  title: any;
-  description: any;
-  image: any;
+  title: string;
+  description: string;
+  image: StaticImageData;
 }) {
   return (
     <div
@@ -34,9 +32,7 @@ function Card({
         </div>
       </div>
       <div>
-        <p className="text-[14px] text-white p-4 pb-10  leading-[1.6] opacity-80">
-          {description}
-        </p>
+        <p className="text-[12px] p-4 pb-10  leading-[1.6]">{description}</p>
       </div>
     </div>
   );

@@ -3,7 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import { ReactLenis } from "lenis/react";
+import ReactAOS from "@/libraries/aos";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -22,16 +22,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ReactLenis root>
-      <html lang="en">
-        <body
-          className={`${montserrat.variable} antialiased overflow-x-hidden`}
-        >
-          <Header />
-          {children}
-          <Footer />
-        </body>
-      </html>
-    </ReactLenis>
+    <html lang="en">
+      <body className={`${montserrat.variable} antialiased overflow-x-hidden`}>
+        <ReactAOS />
+        <Header />
+        {children}
+        <Footer />
+      </body>
+    </html>
   );
 }

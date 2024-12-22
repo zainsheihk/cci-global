@@ -2,7 +2,6 @@
 import React from "react";
 import Card from "./card";
 import Heading from "./heading";
-import Quantango from "./pattern";
 import kenya from "../public/images/CCI-Kenya-Location.jpg";
 import south from "../public/images/CCI-South-Africa-Our-Locations.jpg";
 import ethopia from "../public/images/CCI-Ethiopia-Our-Locations-min.jpg";
@@ -50,16 +49,17 @@ function Location() {
     },
   ];
   return (
-    <section className="bg-[hsla(260,40%,5%,1)] relative">
-      <Quantango />
-      <div className="container py-[80px]">
-        <Heading text="Locations" className="text-[white] text-[50px]" />
-
-        <div className="flex flex-wrap justify-between gap-y-10 mt-6">
-          {locations.map((ele: any, index: number) => (
-            <Card key={index} {...ele} />
-          ))}
-        </div>
+    <section className="container py-[80px]">
+      <Heading text="Locations" className="!text-[var(--secondary-color)]" />
+      <div
+        className="flex flex-wrap justify-between gap-y-10"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-offset="0"
+      >
+        {locations.map((ele: any, index: number) => (
+          <Card key={index} {...ele} />
+        ))}
       </div>
     </section>
   );

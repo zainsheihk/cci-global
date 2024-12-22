@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
 import { FaLinkedin } from "react-icons/fa";
 
@@ -9,35 +8,28 @@ export default function TeamCard({
   description,
   image,
 }: {
-  image: any;
-  name: any;
-  designation: any;
-  description: any;
+  name: string;
+  designation: string;
+  description: string;
+  image: StaticImageData;
 }) {
   return (
-    <div className="w-[32%] relative group rounded-2xl  overflow-hidden">
-      <div className="overflow-hidden rounded-2xl bg-[#18182c]  flex justify-center items-center py-10">
-        <div className="w-[120px] h-[120px] rounded-full overflow-hidden border-[3px] border-[2px_solid_#ccc]">
-          <Image
-            src={image}
-            alt="Team"
-            className="w-full h-full  object-cover "
-          />
-        </div>
+    <div
+      className="w-1/2 relative group"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-offset="0"
+    >
+      <Image src={image} alt="Team" className="w-full" />
+      <div className=" absolute left-0 bottom-0 w-[50%] bg-[var(--secondary-color)] p-5">
+        <h6 className="text-white font-medium capitalize text-[20px]">
+          {name}
+        </h6>
+        <p className="text-[var(--primary-color)]">{designation}</p>
       </div>
-      <div className="p-5 pt-5  rounded-2xl relative -top-3 z-20 card-bg card-mask">
-        <div className="flex justify-between items-center">
-          <div>
-            <h6 className=" font-semibold text-[var(--secondary-color)] capitalize text-[20px] leading-6">
-              {name}
-            </h6>
-            <p className="text-[var(--primary-color)] text-[14px]">
-              {designation}
-            </p>
-          </div>
-          <FaLinkedin className="text-[var(--primary-color)] text-[36px]" />
-        </div>
-        <p className="leading-[1.4] text-[13px]   mt-2 ">{description}</p>
+      <div className="bg-[var(--secondary-color)] duration-500 opacity-0 group-hover:opacity-100 transition-opacity justify-between items-end p-5 absolute top-0 left-0 h-full flex flex-col">
+        <p className="text-white leading-[1.4] text-[14px]">{description}</p>
+        <FaLinkedin className="text-white text-[36px] cursor-pointer" />
       </div>
     </div>
   );

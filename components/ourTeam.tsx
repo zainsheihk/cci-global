@@ -5,6 +5,8 @@ import TeamCard from "./teamCard";
 import team1 from "../public/images/image-22.png";
 import team2 from "../public/images/image-20.png";
 import team3 from "../public/images/image-26.png";
+import team4 from "../public/images/image-27.png";
+
 export default function OurTeam() {
   const teams = [
     {
@@ -28,17 +30,26 @@ export default function OurTeam() {
         "Lizelle has vast knowledge and expertise in various niche entities in the labor market enabling her to identify gaps and create strategic solutions in breaking barriers to entry. She was a guest speaker at Oxford University in 2020 and participated in several global panel discussions around the GBS sector, Impact Sourcing, and Why Africa. She is the leader and integration point between CCI Global and CareerBox.",
       image: team3,
     },
+    {
+      name: "Mahira Khan",
+      designation: "Director of Bids & Contracts",
+      description:
+        "Mahira oversees the growth, bidding, and contracting across the group, implementing the bid and solution management process from qualification all the way until hand over to the project implementation team. She’s accomplished some of our biggest wins and most successful campaigns, helping CCI become a world class provider to some of the world’s leading brands. ",
+      image: team4,
+    },
   ];
   return (
-    <section className="py-[80px] bg-[#e7eaf9] ">
-      <div className="container">
-        <Heading text="Meet our Team" className="text-[40px]" />
-        <div className=" justify-between flex flex-wrap pt-5">
-          {teams.map((ele: any, index: number) => (
-            <TeamCard key={index} {...ele} />
-          ))}
-          {/* <TeamCard /> */}
-        </div>
+    <section className="container py-[80px]">
+      <div data-aos="fade-up" data-aos-duration="800" data-aos-offset="0">
+        <Heading
+          text="Meet our Team"
+          className="!text-[var(--secondary-color)]"
+        />
+      </div>
+      <div className="flex flex-wrap">
+        {teams.map((ele: any, index: number) => (
+          <TeamCard key={index} {...ele} />
+        ))}
       </div>
     </section>
   );

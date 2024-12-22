@@ -1,11 +1,14 @@
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 function MainMenu({ isInvert }: { isInvert?: boolean }) {
+  const pathName = usePathname();
+
   const navigation = [
     {
       label: "About Us",
-      url: "",
+      url: "/#target-section",
     },
     {
       label: "industries",
@@ -44,8 +47,12 @@ function MainMenu({ isInvert }: { isInvert?: boolean }) {
           (ele: { label: string; url: string }, index: number) => (
             <li
               key={index}
-              className={` capitalize text-[15px]  relative after:transition-all after:duration-500 duration-300 hover:text-[var(--primary-color)] ${
-                isInvert ? "text-[var(--secondary-color)]" : "text-white"
+              className={` capitalize text-[15px]  relative hover:after:w-[100%] after:w-[0] after:transition-all after:duration-500 duration-300 after:h-[1px] after:bg-[var(--primary-color)] after:block after:z-20 after:absolute after:bottom-[-2px] after:left-[50%] after:translate-x-[-50%]  hover:text-[var(--primary-color)] ${
+                isInvert || pathName.includes(ele.url)
+                  ? pathName.includes(ele.url)
+                    ? "text-[var(--primary-color)] after:w-[100%]"
+                    : "text-[var(--secondary-color)]"
+                  : "text-white"
               }`}
             >
               <Link href={ele.url}>{ele.label}</Link>

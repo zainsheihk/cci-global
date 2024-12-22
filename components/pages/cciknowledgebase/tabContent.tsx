@@ -1,21 +1,19 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
-import NewsCard from "./newsCard";
-import VideoCard from "./videoCard";
 
-export default function TabContent() {
+export default function TabContent({ content }: { content: any }) {
   return (
     <div className="">
-      <div className=" flex flex-wrap  justify-between gap-y-10 ">
+      {content}
+      {/* <NewsCard />
         <NewsCard />
         <NewsCard />
         <NewsCard />
-        <NewsCard />
         <VideoCard />
         <VideoCard />
         <VideoCard />
         <VideoCard />
-        <VideoCard />
-      </div>
+        <VideoCard /> */}
     </div>
   );
 }

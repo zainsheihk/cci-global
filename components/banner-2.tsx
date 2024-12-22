@@ -6,7 +6,7 @@ import { createNoise3D } from "simplex-noise";
 // Define a type for the Particle properties
 type ParticleProps = Float32Array;
 
-const ParticleCanvas: React.FC = () => {
+const   ParticleCanvas: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const backgroundColor: string = "hsla(260,40%,5%,1)";
   const noise3D = createNoise3D();

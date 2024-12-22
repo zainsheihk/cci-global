@@ -1,21 +1,26 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
-import { SiCircle } from "react-icons/si";
 
-export default function SolutionCard() {
+export default function SolutionCard({
+  icon,
+  title,
+  description,
+}: {
+  icon: any;
+  title: string;
+  description: string;
+}) {
   return (
-    <div className="px-6 pt-8 pb-12 border border-[var(--secondary-color)] w-[32%]">
-      <div className="flex gap-5 mb-3">
-        <SiCircle className="text-[var(--secondary-color)] text-[70px]" />
-        <h6 className="text-[var(--secondary-color)] font-semibold text-[26px] leading-7">
-          Customer Acquisition & Engagement
+    <div className="px-6 pt-8 pb-12 border border-[#0100c2] w-[31%] hover:shadow-2xl transition-all duration-500">
+      <div className="flex gap-5 mb-5">
+        <div className="w-[50px]">{icon}</div>
+        <h6 className="text-[#0100c2] font-semibold text-[24px] leading-7">
+          {title}{" "}
         </h6>
       </div>
       <div>
         <p className="text-[var(--secondary-color)] text-[14px] leading-7">
-          CCI support your businesses to grow and expand across your services.
-          We help in developing sales strategies that directly impact your
-          bottom line with agents working to grow your customer base and
-          interact in a positive manner to maximize your brand value.
+          {description}{" "}
         </p>
       </div>
     </div>

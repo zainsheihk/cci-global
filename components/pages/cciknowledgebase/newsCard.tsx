@@ -1,23 +1,31 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
-import news from "@/public/images/Everest-Website-.png";
 import Image from "next/image";
-export default function NewsCard() {
+export default function NewsCard({
+  title,
+  description,
+  image,
+}: {
+  title: any;
+  description: any;
+  image: any;
+}) {
   return (
-    <div className="w-[48%]">
-      <Image src={news} alt="" className="w-full" />
+    <div className="w-[48%] group">
+      <div className="max-h-[250px] overflow-hidden">
+        <Image
+          src={image}
+          alt=""
+          className="w-full max-h-[250px] object-cover group-hover:scale-110 transition-all duration-1000"
+        />
+      </div>
       <h4 className="text-[var(--secondary-color)] font-semibold my-5 leading-6 text-[22px]">
-        CCI Global Named Major Contender in the 2024 Everest Peak Matrix CXM
-        Report, Recognized Across APAC, EMEA, and the Americas
+        {title}
       </h4>
-      <p className="text-[var(--secondary-color)] text-[14px]">
-        CCI has been recognized in the 2024 Everest Peak Matrix CXM report for
-        the third consecutive year, advancing from its previous position as an
-        Aspirant to Major Contender. This achievement highlights CCI’s
-        excellence in client service delivery across the APAC, EMEA and
-        Americas, supported by its multilingual capabilities and innovative
-        digital tools. With key partnerships and a strong focus on service and
-        technology, CCI continues to lead in market impact.
-      </p>
+      <p
+        className="text-[var(--secondary-color)] text-[14px]"
+        dangerouslySetInnerHTML={{ __html: description }}
+      ></p>
     </div>
   );
 }
