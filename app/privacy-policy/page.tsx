@@ -3,6 +3,11 @@ import React from "react";
 import privacyImage from "@/public/images/Privacy-Image-min-scaled.jpg";
 import Heading from "@/components/heading";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy - CCI",
+};
 export default function Page() {
   return (
     <>
